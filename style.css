@@ -23,16 +23,15 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-inline: 12rem;
+    margin-inline: 250px;
     padding-block: 1em;
 }
 
 .subsection .lista {
     display: flex;
     justify-content: space-between;
-    gap: 2em;
+    gap: 30px;
     cursor: pointer;
-    
 }
 
 .subsection li a {
@@ -43,8 +42,6 @@ body {
 .subsection li {
     list-style: none;
 }
-
-
 
 .pesquisa input {
     border-radius: 7px;
@@ -209,4 +206,85 @@ footer a:hover {
     font-size: 0.8rem;
     color: #777;
     margin: 0;
+}
+
+/*Layout Desktop (a partir de 1024px): 
+Layout Tablet (de 641px até 1023px):
+Layout Mobile (até 640px):*/
+
+/* Estilos gerais continuam os mesmos */
+
+/* Responsividade para Layout Tablet (641px até 1023px) */
+@media (min-width: 641px) and (max-width: 1023px) {
+    /* Ajustar o layout do header */
+    .container {
+        flex-direction: column;
+        margin-inline: 2rem;
+        padding-block: 1rem;
+        text-align: center;
+    }
+
+    .subsection .lista {
+        justify-content: center;
+        gap: 1.5em;
+    }
+
+    .pesquisa input {
+        width: 100%;
+        margin-top: 1em;
+    }
+
+    /* Ajustar layout das seções principais */
+    .left, .right {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .left {
+        margin-bottom: 1.5em;
+    }
+
+    .right img {
+        width: 100%;
+    }
+
+    /* Ajustar a seção de propaganda */
+    .container .propaganda {
+        height: auto; /* Permite que a imagem mantenha sua proporção */
+        overflow: visible; /* Não corta a imagem */
+    }
+
+    .container .propaganda img {
+        position: static;
+        width: 100%;
+        top: 0;
+    }
+
+    /* Produtos em 2 colunas */
+    .container .produtos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .container .produtos li {
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    /* Ajustar o footer */
+    footer .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .footer-section {
+        max-width: none;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1.5em;
+    }
+
+    .footer-bottom {
+        padding-top: 0.5em;
+    }
 }
