@@ -1,0 +1,212 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+header {
+    display: block;
+    background-color: #fff;
+}
+
+header h1 {
+    cursor: pointer;
+}
+
+body {
+    background-color: black;
+
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: 12rem;
+    padding-block: 1em;
+}
+
+.subsection .lista {
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+    cursor: pointer;
+    
+}
+
+.subsection li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.subsection li {
+    list-style: none;
+}
+
+
+
+.pesquisa input {
+    border-radius: 7px;
+    padding: 3px 3px;
+    width: 15rem;
+}
+section {
+    color: #fff;
+    padding-block: 3em;
+}
+
+.produto h2 {
+    margin-inline: 12rem;
+    padding-block: 1em;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    gap: 1em;
+}
+
+.left p {
+    text-align: justify;
+}
+
+.line {
+    background: #fff;
+    width: 100%;
+    height: 2.5px;
+    margin-bottom: 1em;
+    border-radius: 10px;
+}
+
+.btn button {
+    padding: 5px 35px;
+    border-radius: 7px;
+}
+
+.btn button:hover {
+    background-color: #e3e3e3;
+}
+
+.right {
+    max-width: 45%;
+}
+
+.right img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.container .propaganda {
+    width: 100%;
+    height: 275px; 
+    overflow: hidden; 
+    border-radius: 15px;
+}
+
+.container .propaganda img{
+    width: 100%;
+    position: relative;
+    top: -125px;
+    cursor: pointer;
+}
+
+.container .produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 1rem; 
+}
+
+.container .produtos li {
+    background-color: #EAEEEF;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    list-style: none;
+    color: #000;
+}
+
+.container .produtos li img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.container .produtos li h3 {
+    margin-block: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.container .produtos li p {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.container .produtos li button {
+    margin-top: 1rem;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+.container .produtos li button:hover {
+    background-color: #333;
+}
+
+footer {
+    background-color: #111;
+    color: #fff;
+    padding: 1.5em 0;
+    text-align: center;
+}
+
+.container footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2em;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+footer .footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+footer h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5em;
+}
+
+footer p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5em;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ccc;
+}
+
+.footer-bottom {
+    margin-top: 1em;
+    border-top: 1px solid #444;
+    padding-top: 1em;
+}
+
+.footer-bottom p {
+    font-size: 0.8rem;
+    color: #777;
+    margin: 0;
+}
