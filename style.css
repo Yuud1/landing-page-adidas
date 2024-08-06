@@ -27,6 +27,10 @@ body {
     padding-block: 1em;
 }
 
+.produto .container {
+    flex-direction: column;
+}
+
 .subsection .lista {
     display: flex;
     justify-content: space-between;
@@ -212,11 +216,41 @@ footer a:hover {
 Layout Tablet (de 641px até 1023px):
 Layout Mobile (até 640px):*/
 
-/* Estilos gerais continuam os mesmos */
+@media (min-width: 1024px) {
+    .container {
+        flex-direction: row;
+        margin-inline: 12rem;
+        padding-block: 1em;
+    }
+
+    header .container {
+        flex-direction: column;
+        padding-block: 1rem;
+    }
+
+    .subsection .lista {
+        display: flex;
+        justify-content: center;
+        gap: 2em;
+    }
+
+    .container .produtos {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    .pesquisa input {
+        width: 100%;
+        margin-top: 1em;
+    }
+
+    .subsection .lista {
+        justify-content: center;
+        gap: 1.5em;
+    }
+}
 
 /* Responsividade para Layout Tablet (641px até 1023px) */
 @media (min-width: 641px) and (max-width: 1023px) {
-    /* Ajustar o layout do header */
     .container {
         flex-direction: column;
         margin-inline: 2rem;
@@ -234,7 +268,80 @@ Layout Mobile (até 640px):*/
         margin-top: 1em;
     }
 
-    /* Ajustar layout das seções principais */
+    .left, .right {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .left {
+        margin-bottom: 1.5em;
+    }
+    .right img {
+        width: 100%;
+    }
+
+    .container .propaganda {
+        height: auto; 
+        overflow: visible; 
+    }
+
+    .container .propaganda img {
+        position: static;
+        width: 100%;
+        top: 0;
+        border-radius: 15px;
+    }
+
+    .container .produtos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .container .produtos li {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    footer .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .footer-section {
+        max-width: none;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1.5em;
+    }
+
+    .footer-bottom {
+        padding-top: 0.5em;
+    }
+}
+
+/* Responsividade para Layout Mobile (até 640px) */
+@media (max-width: 640px) {
+    .container {
+        flex-direction: column;
+        margin-inline: 1rem;
+        padding-block: 1rem;
+        text-align: center;
+    }
+    
+    section {
+        padding-block: 1.5em;
+    }
+
+    .subsection .lista {
+        align-items: center;
+        gap: 1em;
+    }
+
+    .pesquisa input {
+        width: 100%;
+        margin-top: 1em;
+    }
+
     .left, .right {
         max-width: 100%;
         text-align: center;
@@ -246,39 +353,45 @@ Layout Mobile (até 640px):*/
 
     .right img {
         width: 100%;
+        border-radius: 15px; 
     }
 
-    /* Ajustar a seção de propaganda */
     .container .propaganda {
-        height: auto; /* Permite que a imagem mantenha sua proporção */
-        overflow: visible; /* Não corta a imagem */
+        height: auto; 
+        overflow: visible; 
     }
 
     .container .propaganda img {
         position: static;
         width: 100%;
         top: 0;
+        border-radius: 15px; 
     }
 
-    /* Produtos em 2 colunas */
     .container .produtos {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
+        gap: 1rem;
+    }
+
+    .produto h2 {
+        margin-inline: 0;
+        padding-bottom: 1rem;
     }
 
     .container .produtos li {
         margin: 0 auto;
-        width: 90%;
+        width: 100%;
+        padding: 1rem;
+        border-radius: 15px;
     }
 
-    /* Ajustar o footer */
     footer .container {
         flex-direction: column;
         align-items: center;
+        padding: 0 1rem;
     }
 
     footer .footer-section {
-        max-width: none;
         width: 100%;
         text-align: center;
         margin-bottom: 1.5em;
